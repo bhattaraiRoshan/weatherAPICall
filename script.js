@@ -4,7 +4,6 @@ let APIUrl = 'http://api.openweathermap.org/data/2.5/weather?q=Kathmand&appid=78
 
 const inpElm = document.querySelector('.search-weather')
 const buttonElm = document.querySelector('.search-button')
-// let city = ' '
 
 
 
@@ -76,20 +75,3 @@ const getFetchData = (city) =>{
 
 getFetchData("Kathmandu")
 
-
-
-
-
-// function to get the value from input field 
-// const getInputValue = () =>{
-
-//     buttonElm.addEventListener('click', ()=>{
-
-//         city += inpElm.value
-//     })
-
-//     console.log(city);
-// }
-
-
-// getInputValue()
