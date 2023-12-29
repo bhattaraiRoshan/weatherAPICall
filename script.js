@@ -63,6 +63,7 @@ const getFetchData = (city) =>{
     })
     
    } catch (error) {
+      console.log(error)
 
     if(error){
         document.querySelector(".heading").classList.add("loading");
