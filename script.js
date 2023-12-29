@@ -55,22 +55,18 @@ const dispalyData = (data) =>{
 const getFetchData = (city) =>{
   
 
-   try {
     APIUrl = "http://api.openweathermap.org/data/2.5/weather?q="+ city + "&appid=78902c65366ecbfd628106db571d3d70&units=metric"
 
-    fetch(APIUrl).then((response)=> response.json()).then((data)=>{
+    fetch(APIUrl)       
+    .then((response)=> response.json())
+       .then((data)=>{
+          console.log(data)
         dispalyData(data)
     })
+   .catch((error)=>{
+      console.log("Error While fetching data": error)
+   })
     
-   } catch (error) {
-      console.log(error)
-
-    if(error){
-        document.querySelector(".heading").classList.add("loading");
-    return
-    }
-    
-   }
 
 }
 
